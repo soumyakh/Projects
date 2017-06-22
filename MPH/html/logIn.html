@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/customStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <style>
+  	*{font-family: 'Montserrat', sans-serif;}
+  	body{overflow-x: hidden !important;}   
+    label{font-size: 18px !important;color: #a4a4a4 ;font-weight: normal !important}    
+
+	input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){border-bottom:1px solid #a4a4a4;box-shadow: 0 1px 0 0 #a4a4a4;color:#a4a4a4;}
+	input[type=email]:focus:not([readonly])+label,input[type=password]:focus:not([readonly])+label{color:#a4a4a4;}
+
+	.account{font-size: 28px;}
+    .login_btn{background-color:#ef7e22;color: #ffffff}
+    .login_btn:hover{background-color:#ef7e22;color: #ffffff}
+
+  </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col xl12 l12 m12 s12">
+				<!-- Simple login form -->
+				<form method="POST" name="loginForm" role="form" novalidate>
+					<h5 class="center">Login to your account
+					<!--<small class="display-block validation-error-label" ng-if="loginErrorMessage">{{loginErrorMessage}}</small>--></h5>
+
+
+                    <div class="form-group has-feedback has-feedback-left col offset-xl1 l11 m11 s11 xl10 ">
+                        <div class="input-field">
+                          <input id="email" name="email" ng-model="email" type="email" class="form-control" tabindex="1" required ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/">
+                          <label for="emil">Email</label>
+                          <div class="form-control-feedback">
+                            <i class="icon-user text-muted"></i>
+                          </div>
+                    	</div>
+                    <!--<div ng-messages="loginForm.password.$error"  ng-if="loginForm.password.$touched">
+                            <label id="password-required-error" class="validation-error-label" for="password" ng-message="required">Password is required</label>
+                            <div class="validation-error-label" ng-message="minlength">Password must be of minimum 6 characters!</div>
+
+                        </div>-->
+                    </div>
+
+                    <div class="form-group has-feedback has-feedback-left col offset-xl1 l11 m11 s11 xl10">
+                        <div class="input-field">
+                          <input id="password" type="password" name="password" tabindex="2" ng-model="password" class="form-control" required minlength="6">
+                          <label for="password">Password</label>
+                          <div class="form-control-feedback">
+                            <i class="icon-lock2 text-muted"></i>
+                          </div>
+                    	</div>
+                    <!--<div ng-messages="loginForm.password.$error"  ng-if="loginForm.password.$touched">
+                            <label id="password-required-error" class="validation-error-label" for="password" ng-message="required">Password is required</label>
+                            <div class="validation-error-label" ng-message="minlength">Password must be of minimum 6 characters!</div>
+
+                        </div>-->
+                    </div>
+
+                    <div class="form-group col offset-xl1 xl5 l6 m6 s10">
+                    	<input type="checkbox" id="test5" class="orange" />
+      					<label for="test5" class="txt-size">Remember Me</label>
+                    </div>
+                    <div class="form-group col offset-xl3 xl3 l6 m6 s10 hide-on-small-only hide-on-med-only">
+                    	<a ui-sref="forgotpassword({ panel_id : signupUrl})" class="forgot_psw">Forgot password?</a>
+                    </div>
+
+                    <div class="form-group col xl3 l3 s11 m11 s11 offset-l7"> 
+                        <button ng-disabled="loginForm.$invalid" type="submit" class="btn btn-block login_btn" ng-click="login()">Sign in </button>
+                    </div>
+
+                   <div class="form-group col l10 m10 s10 hide-on-large-only">
+                    	<a ui-sref="forgotpassword({ panel_id : signupUrl})" class="forgot_psw">Forgot password?</a>
+                    </div>
+
+                    <div class="form-group col l10 m10 s10 center">
+                    	<p class="account center">Do you have an Account?</p> 
+                    	<p class="acc_info center">This photoshops version of loreal ipsum. prion <br>gravind nibh vel velit aliquet. Aenean sollicitudian</p>
+                    </div>
+
+                    <div class="form-group col xl4 l4 m4 s11 m4 offset-xl3 offset-l3 offset-m3"> 
+                        <button type="submit" class="btn btn-block login_btn">Sign Up </button>
+                    </div>
+
+				</form>
+			</div><!--end of .col l12 m12 s12 xs12-->
+		</div><!--end of .row-->
+	</div><!--end of .container-->
+</body>
+</html>

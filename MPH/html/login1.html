@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link rel="stylesheet" href="MPH/css/customStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <style>
+    .login_title,label{font-family: 'Montserrat', sans-serif; font-size: 28px;}
+    label{font-size: 18px !important;color: #a4a4a4 !important;font-weight: normal !important}
+  </style>
+</head>
+<body> 
+
+<div class="container">
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Email</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+
+    <!-- Simple login form -->
+                    <form method="POST" name="loginForm" role="form" novalidate>
+                    <p class="text-center login_title">Login to your account</p>
+                        <div class="panel panel-body login-form">
+                            <div class="text-center">
+                                <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
+                                <!--<h5 class="content-group"><small class="display-block validation-error-label" ng-if="loginErrorMessage">{{loginErrorMessage}}</small></h5>-->
+
+                            </div>
+
+                            <div class="form-group has-feedback has-feedback-left">
+                                <div class="input-field">
+                                  <input id="email" name="email" ng-model="email" type="email" class="form-control" tabindex="1" ng-required="true"  ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/">
+                                  <label for="emil">Email</label>
+                                  <div class="form-control-feedback">
+                                    <i class="icon-user text-muted"></i>
+                                  </div>
+                                </div>
+                                <!--<div ng-messages="loginForm.email.$error"  ng-if="loginForm.email.$touched">
+                                    <label id="email-required-error" class="validation-error-label" for="email" ng-message="required">Email is required</label>
+                                    <div class="validation-error-label" ng-message="pattern">Email Id is invalid.</div>
+                                </div>-->
+                            </div>
+
+
+
+                            <div class="form-group has-feedback has-feedback-left">
+
+                                <div class="input-field">
+                                  <input id="password" type="password" name="password" tabindex="2" ng-model="password" class="form-control" required minlength="6">
+                                  <label for="password">Password</label>
+                                  <div class="form-control-feedback">
+                                    <i class="icon-lock2 text-muted"></i>
+                                </div>
+                                </div>
+                            <!--<div ng-messages="loginForm.password.$error"  ng-if="loginForm.password.$touched">
+                                    <label id="password-required-error" class="validation-error-label" for="password" ng-message="required">Password is required</label>
+                                    <div class="validation-error-label" ng-message="minlength">Password must be of minimum 6 characters!</div>
+
+                                </div>-->
+                            </div>
+                            <div class="form-group login-options">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label class="checkbox-inline">
+                                            <input uniform type="checkbox" class="styled"  name="remember" data-ng-model="remember" checked>
+                                            Remember Me
+                                        </label>
+                                    </div>
+
+                                    <div class="col-sm-6 text-right" style="font-weight:bold;">
+                                        <a ui-sref="forgotpassword({ panel_id : signupUrl})">Forgot password?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button ng-disabled="loginForm.$invalid" type="submit" class="btn btn-primary btn-block" ng-click="login()">Sign in <i class="icon-circle-right2 position-right" ></i></button>
+                            </div>
+
+                            <div class="text-center">
+                                <!-- <a href="login_password_recover.html">Forgot password?</a> -->
+                            </div>
+                        </div>
+<!--                        <div class="text-right col-sm-12">
+                            <a href="https://www.apple.com"><img src="app/assets/images/social-media/appstore.png"></a>
+                            <a href="https://www.playstore.com"><img src="app/assets/images/social-media/googleplay.png"></a>
+                        </div>-->
+                    </form>
+                    <!-- /simple login form -->
+            
+</div>
+</body>
+</html>

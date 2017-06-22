@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rewards</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/customStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <style>
+  	*{font-family: 'Montserrat', sans-serif;}
+  	body{overflow-x: hidden !important;}
+    .reward-txt,.reward_tabs{width: 80%; margin-left: auto;; margin-right: auto;padding: 10px;text-align: justify;}
+    #tabs-swipe-demo>li>a{text-decoration: none;color: #ef7e22}
+    #tabs-swipe-demo>li>a.active{color:#1b5284; }
+    #tabs-swipe-demo{padding-bottom: 20px;} 
+    .outer-box{border:1px solid #c0c0c0;}   
+    .outer-box>.inner-box>img{padding-bottom: 30%;padding-top: 30%;}   
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+      <div class="row center">
+        <div class="col s12 m12 l12 xl12">
+           <p class="reward-txt"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+      </div><!--end of .row-->
+      <div class="row center">
+          <div class="col xl4 l4 m4 s4">
+              Total Points Redeemed<br><span>31500</span>
+          </div>
+          <div class="col xl4 l4 m4 s4">
+              Total Points Earned<br><span>31500</span>
+          </div>
+          <div class="col xl4 l4 m4 s4">
+              Points Available<br><span>31500</span>
+          </div>
+      </div><!--end of .row-->
+      <div class="row">
+          <div class="col offset-xl1 s12 m12 l12 xl11">
+              <ul id="tabs-swipe-demo" class="tabs">
+                <li class="tab col s6 m4 l2 xl2"><a class="active" href="#test-swipe-1">Redeem Rewards</a></li>
+                <li class="tab col s6 m4 l2 xl2"><a href="#test-swipe-2">Panelist Rewards</a></li>
+                <li class="tab col s6 m4 l2 xl2"><a href="#test-swipe-3">Points Redeemed</a></li>
+                <li class="tab col s6 m4 l2 xl2"><a href="#test-swipe-4">Points Credited</a></li>
+              </ul>
+              <div id="test-swipe-1" class="col s11 m11 l11 xl11">
+                  <div class="col s6 m6 l3 xl3 center">
+                      <div class="outer-box center">
+                          <div class="inner-box center">
+                              <img src="../image/flip.png" alt="flipkart" class="center-block">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col s6 m6 l3 xl3 center">
+                      <div class="outer-box center">
+                          <div class="inner-box center">
+                              <img src="../image/amaz.png" alt="flipkart" class="center-block">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col s6 m6 l3 xl3 center">
+                      <div class="outer-box center">
+                          <div class="inner-box center">
+                              <img src="../image/gift.png" alt="flipkart" class="center-block">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col s6 m6 l3 xl3 center">
+                      <div class="outer-box center">
+                          <div class="inner-box center">
+                              <img src="../image/wcash.png" alt="flipkart" class="center-block">
+                          </div>
+                      </div>
+                  </div>
+              </div><!--#test-swipe-1-->
+              <div id="test-swipe-2" class="col s12">Test 2</div>
+              <div id="test-swipe-3" class="col s12">Test 3</div>
+              <div id="test-swipe-4" class="col s12">Test 4</div>
+          </div>
+      </div><!--end of .row-->
+  </div><!--end of .container-->
+</body>
+</html>
